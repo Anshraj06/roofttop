@@ -1,38 +1,41 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const closeMenu = () => setIsOpen(false);
 
   return (
-    <nav className="navbar">
-      <div className="nav-left">
-        <img src="/images/logo.jpg" alt="Logo" className="logo-img" />
-        <label className="logo-text">CODECORDS</label>
-      </div>
+    <header>
+      <nav className="navbar">
+        <div className="navbar-left">
+         
+          <img src="/images/logo.jpg" alt="Logo" className="logo-img" />
+           <label className="logo-text">CODECORDS</label>
+        </div>
 
-      <div className="single-line-text">
-        <h2>Farmer Web Application</h2>
-      </div>
+        {/* 👇 Combine heading and hamburger */}
+        <div className="navbar-right">
+          <div className="navbar-center">
+            <h2>GHAR KI KHETI</h2>
+          </div>
+          <div className="hamburger" onClick={toggleMenu}>
+            ☰
+          </div>
+        </div>
 
-      {/* Toggle Button */}
-      <div className="menu-toggle" onClick={toggleMenu}>
-        ☰
-      </div>
-
-      <ul className={`nav-links ${menuOpen ? 'show' : ''}`}>
-        <li><a className="actions" href="/home.html">Home</a></li>
-        <li><a className="actions" href="/about.html">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contacts</a></li>
-        <li><a href="#">Weather</a></li>
-        <li><a href="#request">Request</a></li>
-      </ul>
-    </nav>
+        <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
+          <li><Link className="actions" to="/" onClick={closeMenu}>Home</Link></li>
+          <li><Link className="actions" to="/about" onClick={closeMenu}>About</Link></li>
+          <li><Link className="actions" to="/services" onClick={closeMenu}>Services</Link></li>
+          <li><Link className="actions" to="/contacts" onClick={closeMenu}>Contacts</Link></li>
+          <li><Link className="actions" to="/products" onClick={closeMenu}>Products</Link></li>
+        </ul>
+      </nav>
+    </header>
   );
 };
 

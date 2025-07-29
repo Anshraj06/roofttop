@@ -4,8 +4,7 @@ function App() {
   return (
     <>
       <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link
@@ -17,30 +16,7 @@ function App() {
       </head>
 
       <body>
-        <header>
-          <nav className="navbar">
-  <div className="navbar-left">
-    <label className="logo-text">CODECORDS</label>
-    <div className="title"></div>
-    <img src="/images/logo.jpg" alt="Logo" width="100" height="100" className="logo-img" />
-  </div>
-
-  <div className="navbar-center">
-    <h2>GHAR KI KHETI</h2>
-  </div>
-
-  <ul className="nav-links">
-    <li><a className="actions" href="/">Home</a></li>
-    <li><a className="actions" href="/">About</a></li>
-    <li><a className="actions" href="#">Services</a></li>
-    <li><a className="actions" href="#">Contacts</a></li>
-    <li><a className="actions" href="#">Weather</a></li>
-  </ul>
-</nav>
-
-
-        </header>
-
+       
         <main>
           <section className="firstsection">
             <div className="leftsection">

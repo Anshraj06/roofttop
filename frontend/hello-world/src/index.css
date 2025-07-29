@@ -73,9 +73,23 @@ nav ul li a:hover {
 }
 
 .rightsection img {
-  width: 200%;
-  max-width: 500px;
+  width: 300%;
+  max-width: 600px;
 }
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('C:\Users\anshr\OneDrive\Desktop\Reactkaro\frontend\hello-world\public\images\ansh.jpg'); /* replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 
 .features {
   display: flex;
