@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './RequestForm.css'; // External styling
+import './requestForm.css'; // External styling
 
 const RequestForm = () => {
   const [formData, setFormData] = useState({
